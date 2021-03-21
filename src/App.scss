@@ -1,4 +1,18 @@
+@import './styles/Variables.scss';
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .main-wrapper {
+  position: relative;
+  box-sizing: border-box;
   padding: 0 14px;
   margin: 0 auto;
   width: 100%;
@@ -21,17 +35,95 @@ img {
   justify-content: center;
   padding: 5px;
   border-radius: 50%;
+  background: hsl(0, 0%, 90%);
+
+  &.bug {
+    background: $bug;
+  }
+
+  &.dark {
+    background: $dark;
+  }
+
+  &.dragon {
+    background: $dragon;
+  }
 
   &.water {
-    background: hsl(199, 94%, 47%);
+    background: $water;
+  }
+
+  &.electric {
+    background: $electric;
+  }
+
+  &.fairy {
+    background: $fairy;
+  }
+
+  &.fighting {
+    background: $fighting;
+  }
+
+  &.fire {
+    background: $fire;
+  }
+
+  &.flying {
+    background: $flying;
+  }
+
+  &.ghost {
+    background: $ghost;
+  }
+
+  &.grass {
+    background: $grass;
+  }
+
+  &.ground {
+    background: $ground;
+  }
+
+  &.ice {
+    background: $ice;
+  }
+
+  &.normal {
+    background: $normal;
+  }
+
+  &.poison {
+    background: $poison;
+  }
+
+  &.psychic {
+    background: $psychic;
+  }
+
+  &.rock {
+    background: $rock;
+  }
+
+  &.steel {
+    background: $steel;
+  }
+
+  &.water {
+    background: $water;
   }
 }
 
-.pokemon-list-item {
+.pokemon-list {
+  margin: 0 -14px;
+}
+
+.pokemon-item-row {
   display: grid;
-  grid-template-columns: 60px 60px auto 32px 32px;
+  grid-template-columns: 60px 50px auto 55px;
   grid-gap: 6px;
   margin-bottom: 6px;
+  padding: 4px 14px;
 
   .pokemon-id {
     border-radius: 100px;
@@ -55,8 +147,19 @@ img {
     color: hsl(0, 0%, 50%);
   }
 
+  .pokemon-type-combo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
   .pokemon-type {
     justify-self: center;
+    margin-right: auto;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   >* {

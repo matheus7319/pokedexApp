@@ -32,7 +32,7 @@ const Home = (props) => {
         <PokedexList>
           {pokemon.map((item, index) => {
             return (
-              <PokedexItem key={`pokemon-${index}`} id={item.name}></PokedexItem>
+              <PokedexItem key={`pokemon-${index}`} param={item.name}></PokedexItem>
             )
           })}
         </PokedexList>
