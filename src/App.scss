@@ -116,6 +116,27 @@ img {
 
 .pokemon-list {
   margin: 0 -14px;
+  padding-bottom: 55px;
+}
+
+.pokemon-list-buttons {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -14px;
+  padding: 4px 14px;
+  bottom: 0;
+  width: 100%;
+  background: white;
+
+  >button {
+    margin-right: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .pokemon-item-row {

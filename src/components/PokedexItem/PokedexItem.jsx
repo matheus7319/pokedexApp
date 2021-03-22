@@ -15,7 +15,6 @@ const PokedexItem = (props) => {
 
   useEffect(() => {
     pokeService.getPokemonByName(pokemon).then(res => {
-      console.log(res)
       setId(res.id);
       setImage(res.sprites.other["official-artwork"].front_default);
       // setImage(res.sprites.versions["generation-viii"].icons.front_default);
