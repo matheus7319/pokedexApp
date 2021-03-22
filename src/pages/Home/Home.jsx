@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PokedexList from '~/../../src/components/PokedexList/PokedexList';
 import PokedexItem from '~/../../src/components/PokedexItem/PokedexItem';
 
-import { Badge } from 'primereact/badge';
 import { GenerationService } from "~/../../src/services/generation";
 import { PokemonService } from "~/../../src/services/pokemon";
 
@@ -28,7 +27,6 @@ const Home = (props) => {
         <p>LEFT SIDE</p>
       </div>
       <div>
-        <Badge value="2"></Badge>
         <PokedexList>
           {pokemon.map((item, index) => {
             return (
